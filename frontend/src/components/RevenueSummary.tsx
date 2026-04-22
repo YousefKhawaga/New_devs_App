@@ -24,6 +24,7 @@ export const RevenueSummary: React.FC<RevenueSummaryProps> = ({ propertyId = 'pr
     useEffect(() => {
         const fetchRevenue = async () => {
             setLoading(true);
+            setError('');
             try {
                 // Use SecureAPI to handle authentication automatically
                 // We pass the simulatedTenant option which SecureAPI will attach as a header
